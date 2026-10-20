@@ -1,3 +1,4 @@
+import localDictionaryApi from './vite-plugins/localDictionaryApi'
 import react from '@vitejs/plugin-react'
 import { promises as fs } from 'fs'
 import { getLastCommit } from 'git-last-commit'
@@ -16,6 +17,7 @@ export default defineConfig(async ({ mode }) => {
   })
   return {
     plugins: [
+      localDictionaryApi(),
       react({ babel: { plugins: [jotaiDebugLabel, jotaiReactRefresh] } }),
       visualizer() as PluginOption,
       Icons({

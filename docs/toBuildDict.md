@@ -120,4 +120,49 @@
 
 现在你可以提交 PR 了，我们会尽快 review 你的代码，如果一切顺利，你的词典将会在下一个版本中发布。🎉
 
+## 2. 本地个人词典（无需改代码）🧑‍💻
+
+如果只是自己使用，不想每次新增词典或追加单词都修改 `src/resources/dictionary.ts`，可以使用运行时本地索引：
+
+- 索引文件：`public/dicts/local-index.json`
+- 词库文件：仍放在 `public/dicts/` 下
+- 应用会在启动时读取该索引。使用 `pnpm dev` 时，新增词典只需要在 `local-index.json` 中增加一条记录并刷新页面，不需要改 TypeScript 代码，也不需要重新构建。
+
+`local-index.json` 结构示例：
+
+```json
+{
+  "dictionaries": [
+    {
+      "id": "my_dict",
+      "name": "我的词典",
+      "description": "个人使用",
+      "category": "个人词典",
+      "tags": ["个人"],
+      "url": "/dicts/my_dict.json",
+      "length": 100,
+      "language": "en",
+      "languageCategory": "en"
+    }
+  ],
+  "lengthOverrides": {
+    "cet4_composition_template": 120
+  }
+}
+```
+
+- `dictionaries`：新增的本地词典列表。
+- `lengthOverrides`：追加单词后覆盖内置词典的词数；章节数会根据它自动重新计算。
+
+### 2.1 在应用内导入 / 追加 ✍️
+
+1. 在项目目录运行 `pnpm dev`
+2. 打开词典库，点击右上角的“导入词典”
+3. 选择 JSON 文件，选择“新建词典”或“追加到已有词典”
+4. 导入成功后会写入 `public/dicts/*.json` 并更新 `public/dicts/local-index.json`，页面自动刷新
+
+下次运行 `pnpm dev` 时，修改仍然生效。追加单词会按单词名去重，并自动更新词数和章节数。
+
+> 注意：浏览器不能直接写项目文件，因此导入功能依赖本地 dev server。使用静态部署或 `pnpm build` 后的页面时，只能读取已有词典，无法写回文件。
+
 ## 别忘了，在任何步骤遇到困难时，你都可以转向 qwerty learner 社区寻求帮助。我们是一个非常友好的社区，随时欢迎你的加入！🤝

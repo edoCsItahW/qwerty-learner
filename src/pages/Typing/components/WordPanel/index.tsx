@@ -170,7 +170,7 @@ export default function WordPanel() {
           </>
         )}
       </div>
-      <div className="container flex flex-grow flex-col items-center justify-center">
+      <div className="container flex min-h-0 flex-grow flex-col items-center justify-center px-14">
         {currentWord && (
           <div className="relative flex w-full justify-center">
             {!state.isTyping && (
@@ -182,7 +182,7 @@ export default function WordPanel() {
                 </div>
               </div>
             )}
-            <div className="relative">
+            <div className="relative w-full">
               <WordComponent word={currentWord} onFinish={onFinish} key={wordComponentKey} />
               {phoneticConfig.isOpen && <Phonetic word={currentWord} hidden={isZhToEnMode && !isPhoneticHintVisible} />}
               <Translation

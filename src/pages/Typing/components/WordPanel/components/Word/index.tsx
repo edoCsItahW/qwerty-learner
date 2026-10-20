@@ -6,6 +6,7 @@ import { TipAlert } from './TipAlert'
 import style from './index.module.css'
 import { initialWordState } from './type'
 import type { WordState } from './type'
+import { useFitFontSize } from './useFitFontSize'
 import Tooltip from '@/components/Tooltip'
 import type { WordPronunciationIconRef } from '@/components/WordPronunciationIcon'
 import { WordPronunciationIcon } from '@/components/WordPronunciationIcon'
@@ -15,6 +16,7 @@ import { TypingContext, TypingStateActionType } from '@/pages/Typing/store'
 import {
   currentChapterAtom,
   currentDictInfoAtom,
+  fontSizeConfigAtom,
   isIgnoreCaseAtom,
   isPhoneticHintVisibleAtom,
   isShowAnswerOnHoverAtom,
@@ -26,7 +28,7 @@ import type { Word } from '@/typings'
 import { CTRL, getUtcStringForMixpanel } from '@/utils'
 import { useSaveWordRecord } from '@/utils/db'
 import { useAtomValue, useSetAtom } from 'jotai'
-import { useCallback, useContext, useEffect, useRef, useState } from 'react'
+import { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { useHotkeys } from 'react-hotkeys-hook'
 import { useImmer } from 'use-immer'
 
@@ -36,6 +38,30 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
   // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
   const { state, dispatch } = useContext(TypingContext)!
   const [wordState, setWordState] = useImmer<WordState>(structuredClone(initialWordState))
+
+  const baseForeignFontSize = useAtomValue(fontSizeConfigAtom).foreignFont
+  const viewportRef = useRef<HTMLDivElement>(null)
+  const measureRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
+  // 长句自动缩小字号，短单词保持用户设置的字号
+  const fittedFontSize = useFitFontSize(viewportRef, measureRef, contentRef, baseForeignFontSize, wordState.displayWord)
+
+  // 按空格分组：换行只发生在单词之间，避免把单词从中间截断
+  const letterGroups = useMemo(() => {
+    const groups: { letter: string; index: number }[][] = []
+    let currentGroup: { letter: string; index: number }[] = []
+
+    wordState.displayWord.split('').forEach((letter, index) => {
+      currentGroup.push({ letter, index })
+      if (letter === EXPLICIT_SPACE) {
+        groups.push(currentGroup)
+        currentGroup = []
+      }
+    })
+    if (currentGroup.length > 0) groups.push(currentGroup)
+
+    return groups
+  }, [wordState.displayWord])
 
   const wordDictationConfig = useAtomValue(wordDictationConfigAtom)
   // 以中记英（看中文写英文）：只给中文释义默写英文，音标默认隐藏，按住快捷键才显示并朗读
@@ -317,31 +343,66 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
       <InputHandler updateInput={updateInput} />
       <div
         lang={currentLanguageCategory !== 'code' ? currentLanguageCategory : 'en'}
-        className="flex flex-col items-center justify-center pb-1 pt-4"
+        className="flex w-full flex-col items-center justify-center pb-1 pt-4"
       >
         {['romaji', 'hapin'].includes(currentLanguage) && word.notation && <Notation notation={word.notation} />}
-        <div
-          className={`tooltip-info relative w-fit bg-transparent p-0 leading-normal shadow-none dark:bg-transparent ${
-            wordDictationConfig.isOpen ? 'tooltip' : ''
-          }`}
-          data-tip={isZhToEnMode ? `按 ${CTRL} + J 显示音标并朗读，按 Tab 显示完整单词` : '按 Tab 快捷键显示完整单词'}
-        >
+        <div ref={viewportRef} className="relative flex w-full justify-center">
           <div
-            onMouseEnter={() => handleHoverWord(true)}
-            onMouseLeave={() => handleHoverWord(false)}
-            className={`flex items-center ${isTextSelectable && 'select-all'} justify-center ${wordState.hasWrong ? style.wrong : ''}`}
+            className={`tooltip-info relative w-fit max-w-full bg-transparent p-0 leading-normal shadow-none dark:bg-transparent ${
+              wordDictationConfig.isOpen ? 'tooltip' : ''
+            }`}
+            data-tip={isZhToEnMode ? `按 ${CTRL} + J 显示音标并朗读，按 Tab 显示完整单词` : '按 Tab 快捷键显示完整单词'}
           >
-            {wordState.displayWord.split('').map((t, index) => {
-              return <Letter key={`${index}-${t}`} letter={t} visible={getLetterVisible(index)} state={wordState.letterStates[index]} />
-            })}
-          </div>
-          {pronunciationIsOpen && (
-            <div className="absolute -right-12 top-1/2 h-9 w-9 -translate-y-1/2 transform ">
-              <Tooltip content={`快捷键${CTRL} + J`}>
-                <WordPronunciationIcon word={word} lang={currentLanguage} ref={wordPronunciationIconRef} className="h-full w-full" />
-              </Tooltip>
+            <div
+              ref={contentRef}
+              onMouseEnter={() => handleHoverWord(true)}
+              onMouseLeave={() => handleHoverWord(false)}
+              className={`flex max-w-full flex-wrap items-center justify-center gap-y-1 ${isTextSelectable && 'select-all'} ${
+                wordState.hasWrong ? style.wrong : ''
+              }`}
+            >
+              {letterGroups.map((group, groupIndex) => (
+                <span
+                  key={`group-${groupIndex}`}
+                  // 单词本身不主动换行；仅当单个单词比可视宽度还长时才在内部折行兜底
+                  className="flex min-w-0 max-w-full flex-wrap items-center justify-center"
+                >
+                  {group.map(({ letter, index }) => (
+                    <Letter
+                      key={`${index}-${letter}`}
+                      letter={letter}
+                      visible={getLetterVisible(index)}
+                      state={wordState.letterStates[index]}
+                      fontSize={fittedFontSize}
+                    />
+                  ))}
+                </span>
+              ))}
             </div>
-          )}
+            {pronunciationIsOpen && (
+              <div className="absolute -right-12 top-1/2 h-9 w-9 -translate-y-1/2 transform ">
+                <Tooltip content={`快捷键${CTRL} + J`}>
+                  <WordPronunciationIcon word={word} lang={currentLanguage} ref={wordPronunciationIconRef} className="h-full w-full" />
+                </Tooltip>
+              </div>
+            )}
+            {/* 隐藏的测量元素：始终按用户设置的字号排成一行，用于计算长句的自适应字号 */}
+            <div className="pointer-events-none invisible absolute inset-0 overflow-hidden" aria-hidden="true">
+              <div
+                ref={measureRef}
+                className="flex w-max items-center whitespace-nowrap leading-normal"
+                style={{ fontSize: `${baseForeignFontSize}px` }}
+              >
+                {letterGroups.map((group, groupIndex) => (
+                  <span key={`measure-group-${groupIndex}`} className="flex items-center">
+                    {group.map(({ letter, index }) => (
+                      <Letter key={`measure-${index}-${letter}`} letter={letter} visible fontSize={baseForeignFontSize} />
+                    ))}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <TipAlert className="fixed bottom-10 right-3" show={showTipAlert} setShow={setShowTipAlert} />

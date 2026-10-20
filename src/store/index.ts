@@ -108,6 +108,13 @@ export const wordDictationConfigAtom = atomForConfig('wordDictationConfig', {
   openBy: 'auto' as WordDictationOpenBy,
 })
 
+/**
+ * 以中记英（看中文写英文）模式下，按住提示快捷键时是否展示音标
+ *
+ * 由 Word 组件的快捷键开关，由 WordPanel 读取来决定是否展示音标
+ */
+export const isPhoneticHintVisibleAtom = atom(false)
+
 export const dismissStartCardDateAtom = atomWithStorage<Date | null>(DISMISS_START_CARD_DATE_KEY, null)
 
 // Enhanced version promotion popup state

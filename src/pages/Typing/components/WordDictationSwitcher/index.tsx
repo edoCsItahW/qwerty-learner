@@ -1,5 +1,6 @@
 import { wordDictationConfigAtom } from '@/store'
 import type { WordDictationType } from '@/typings'
+import { CTRL } from '@/utils'
 import { Listbox, Popover, Switch, Transition } from '@headlessui/react'
 import { useAtom } from 'jotai'
 import { Fragment, useLayoutEffect, useState } from 'react'
@@ -25,6 +26,10 @@ const wordDictationTypeList: { name: string; type: WordDictationType }[] = [
   {
     name: '随机隐藏',
     type: 'randomHide',
+  },
+  {
+    name: '看中文写英文',
+    type: 'zhToEn',
   },
 ]
 
@@ -141,6 +146,11 @@ export default function WordDictationSwitcher() {
                         </div>
                       </Listbox>
                     </div>
+                    {wordDictationConfig.type === 'zhToEn' && (
+                      <span className="text-xs font-normal leading-tight text-gray-500 dark:text-gray-400">
+                        {`只给中文释义默写英文：按住 ${CTRL} + J 显示音标并朗读，鼠标悬停显示完整单词`}
+                      </span>
+                    )}
                   </div>
                 </Transition>
               </div>

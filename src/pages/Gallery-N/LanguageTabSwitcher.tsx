@@ -39,7 +39,7 @@ export function LanguageTabSwitcher() {
 
   return (
     <RadioGroup value={state.currentLanguageTab} onChange={onChangeTab}>
-      <div className="flex items-center space-x-4">
+      <div className="flex flex-wrap items-center gap-4">
         {options.map((option) => (
           <RadioGroup.Option key={option.id} value={option.id} className="cursor-pointer">
             {({ checked }) => (

@@ -4,6 +4,7 @@ import { ErrorBook } from './pages/ErrorBook'
 import { FriendLinks } from './pages/FriendLinks'
 import MobilePage from './pages/Mobile'
 import TypingPage from './pages/Typing'
+import { loadLocalDictionaryIndex } from '@/resources/localDictionary'
 import { isOpenDarkModeAtom } from '@/store'
 import { Analytics } from '@vercel/analytics/react'
 import 'animate.css'
@@ -75,4 +76,9 @@ function Root() {
 
 const container = document.getElementById('root')
 
-container && createRoot(container).render(<Root />)
+if (container) {
+  // 先合并 public/dicts/local-index.json，再渲染应用，保证自定义词典能被正确识别
+  loadLocalDictionaryIndex().finally(() => {
+    createRoot(container).render(<Root />)
+  })
+}

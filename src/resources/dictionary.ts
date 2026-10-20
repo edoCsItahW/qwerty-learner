@@ -4155,6 +4155,21 @@ const indonesianDicts: DictionaryResource[] = [
   },
 ]
 
+// 四级作文模板库
+const CET4CompositionTemplateDicts: DictionaryResource[] = [
+  {
+    id: 'cet4_composition_template',
+    name: '四级作文模板',
+    description: '为英语四级（CET4）准备的作文模板片段',
+    category: '句子',
+    tags: ['长句'],
+    url: '/dicts/cet4_composition_template.json',
+    length: 80,
+    language: 'en',
+    languageCategory: 'en',
+  },
+]
+
 /**
  * Built-in dictionaries in an array.
  * Why arrays? Because it keeps the order across browsers.
@@ -4168,6 +4183,7 @@ export const dictionaryResources: DictionaryResource[] = [
   ...germanExam,
   ...kazakhHapinDicts,
   ...indonesianDicts,
+  ...CET4CompositionTemplateDicts,
 
   // {
   //   id: 'zhtest',

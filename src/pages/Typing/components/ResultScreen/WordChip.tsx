@@ -24,18 +24,18 @@ export default function WordChip({ word }: { word: WordWithIndex }) {
     <>
       <button
         ref={refs.setReference}
-        className="word-chip select-all"
+        className="word-chip h-auto min-h-[2.5rem] max-w-full select-all md:h-auto md:min-h-[3rem]"
         {...getReferenceProps()}
         type="button"
         onClick={onClickWord}
         title={`朗读 ${word.name}`}
       >
-        <span>{word.name}</span>
+        <span className="break-words text-left leading-tight">{word.name}</span>
       </button>
       {showTranslation && (
         <div
           ref={refs.setFloating}
-          className="word-chip-tooltip"
+          className="word-chip-tooltip max-w-[24rem] whitespace-normal break-words"
           style={{
             position: strategy,
             top: y ?? 0,

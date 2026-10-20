@@ -6,7 +6,15 @@ import Phonetic from './components/Phonetic'
 import Translation from './components/Translation'
 import WordComponent from './components/Word'
 import { usePrefetchPronunciationSound } from '@/hooks/usePronunciation'
-import { isReviewModeAtom, isShowPrevAndNextWordAtom, loopWordConfigAtom, phoneticConfigAtom, reviewModeInfoAtom } from '@/store'
+import {
+  isPhoneticHintVisibleAtom,
+  isReviewModeAtom,
+  isShowPrevAndNextWordAtom,
+  loopWordConfigAtom,
+  phoneticConfigAtom,
+  reviewModeInfoAtom,
+  wordDictationConfigAtom,
+} from '@/store'
 import type { Word } from '@/typings'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { useCallback, useContext, useMemo, useState } from 'react'
@@ -16,6 +24,10 @@ export default function WordPanel() {
   // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
   const { state, dispatch } = useContext(TypingContext)!
   const phoneticConfig = useAtomValue(phoneticConfigAtom)
+  const wordDictationConfig = useAtomValue(wordDictationConfigAtom)
+  const isPhoneticHintVisible = useAtomValue(isPhoneticHintVisibleAtom)
+  // 以中记英（看中文写英文）模式：音标默认隐藏，按住 Ctrl + J 才显示
+  const isZhToEnMode = wordDictationConfig.isOpen && wordDictationConfig.type === 'zhToEn'
   const isShowPrevAndNextWord = useAtomValue(isShowPrevAndNextWordAtom)
   const [wordComponentKey, setWordComponentKey] = useState(0)
   const [currentWordExerciseCount, setCurrentWordExerciseCount] = useState(0)
@@ -172,7 +184,7 @@ export default function WordPanel() {
             )}
             <div className="relative">
               <WordComponent word={currentWord} onFinish={onFinish} key={wordComponentKey} />
-              {phoneticConfig.isOpen && <Phonetic word={currentWord} />}
+              {phoneticConfig.isOpen && <Phonetic word={currentWord} hidden={isZhToEnMode && !isPhoneticHintVisible} />}
               <Translation
                 trans={currentWord.trans.join('；')}
                 showTrans={shouldShowTranslation}

@@ -103,6 +103,10 @@ GitHub Pages: <https://realkai42.github.io/qwerty-learner/>
 
 在用户完成一个章节的练习后，会弹出选项是否默写本章，方便用户巩固本章学习的单词。
 
+默写模式支持多种隐藏方式（工具栏眼睛图标，或 `Ctrl + V` 开关）：「全部隐藏」「隐藏元音」「隐藏辅音」「随机隐藏」「看中文写英文」。
+
+其中「看中文写英文」（以中记英）只给出中文释义，需要凭记忆默写英文单词：音标默认隐藏，按住 `Ctrl + J` 显示音标并朗读；鼠标悬停仍可查看完整单词（需在设置中开启「是否允许默写模式下显示提示」）。
+
 <div align=center>
 <img  src="https://github.com/Realkai42/qwerty-learner/blob/master/docs/dictation.png"/>
 </div>

@@ -16,6 +16,7 @@ import {
   currentChapterAtom,
   currentDictInfoAtom,
   isIgnoreCaseAtom,
+  isPhoneticHintVisibleAtom,
   isShowAnswerOnHoverAtom,
   isTextSelectableAtom,
   pronunciationIsOpenAtom,
@@ -24,7 +25,7 @@ import {
 import type { Word } from '@/typings'
 import { CTRL, getUtcStringForMixpanel } from '@/utils'
 import { useSaveWordRecord } from '@/utils/db'
-import { useAtomValue } from 'jotai'
+import { useAtomValue, useSetAtom } from 'jotai'
 import { useCallback, useContext, useEffect, useRef, useState } from 'react'
 import { useHotkeys } from 'react-hotkeys-hook'
 import { useImmer } from 'use-immer'
@@ -37,6 +38,9 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
   const [wordState, setWordState] = useImmer<WordState>(structuredClone(initialWordState))
 
   const wordDictationConfig = useAtomValue(wordDictationConfigAtom)
+  // 以中记英（看中文写英文）：只给中文释义默写英文，音标默认隐藏，按住快捷键才显示并朗读
+  const isZhToEnMode = wordDictationConfig.isOpen && wordDictationConfig.type === 'zhToEn'
+  const setIsPhoneticHintVisible = useSetAtom(isPhoneticHintVisibleAtom)
   const isTextSelectable = useAtomValue(isTextSelectableAtom)
   const isIgnoreCase = useAtomValue(isIgnoreCaseAtom)
   const isShowAnswerOnHover = useAtomValue(isShowAnswerOnHoverAtom)
@@ -69,7 +73,14 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
     newWordState.startTime = getUtcStringForMixpanel()
     newWordState.randomLetterVisible = headword.split('').map(() => Math.random() > 0.4)
     setWordState(newWordState)
-  }, [word, setWordState])
+    // 换单词时收起音标提示，避免提示残留到下一个单词
+    setIsPhoneticHintVisible(false)
+  }, [word, setWordState, setIsPhoneticHintVisible])
+
+  useEffect(() => {
+    // 离开练习页时收起音标提示
+    return () => setIsPhoneticHintVisible(false)
+  }, [setIsPhoneticHintVisible])
 
   const updateInput = useCallback(
     (updateAction: WordUpdateAction) => {
@@ -119,27 +130,48 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
   )
   useHotkeys(
     'ctrl+j',
-    () => {
+    (e) => {
+      // 长按会重复触发 keydown，避免读音被反复打断
+      if (e.repeat) return
+      // 以中记英模式下，按住快捷键同时展示音标
+      if (isZhToEnMode) {
+        setIsPhoneticHintVisible(true)
+      }
       if (state.isTyping) {
         wordPronunciationIconRef.current?.play()
       }
     },
-    [state.isTyping],
+    [state.isTyping, isZhToEnMode, setIsPhoneticHintVisible],
     { enableOnFormTags: true, preventDefault: true },
   )
 
+  useHotkeys(
+    'ctrl+j',
+    () => {
+      if (isZhToEnMode) {
+        setIsPhoneticHintVisible(false)
+      }
+    },
+    { enableOnFormTags: true, keyup: true, preventDefault: true },
+    [isZhToEnMode, setIsPhoneticHintVisible],
+  )
+
   useEffect(() => {
+    // 以中记英模式下不自动朗读，否则等于直接给出读音提示
+    if (isZhToEnMode) return
+
     if (wordState.inputWord.length === 0 && state.isTyping) {
       wordPronunciationIconRef.current?.play && wordPronunciationIconRef.current?.play()
     }
-  }, [state.isTyping, wordState.inputWord.length, wordPronunciationIconRef.current?.play])
+  }, [state.isTyping, wordState.inputWord.length, isZhToEnMode, wordPronunciationIconRef.current?.play])
 
   const getLetterVisible = useCallback(
     (index: number) => {
       if (wordState.letterStates[index] === 'correct' || (isShowAnswerOnHover && isHoveringWord)) return true
 
       if (wordDictationConfig.isOpen) {
-        if (wordDictationConfig.type === 'hideAll') return false
+        // 以中记英与全部隐藏一样，默认不展示任何字母，仅凭鼠标悬停或输入来揭示
+        if (wordDictationConfig.type === 'hideAll' || wordDictationConfig.type === 'zhToEn') return false
 
         const letter = wordState.displayWord[index]
         if (wordDictationConfig.type === 'hideVowel') {
@@ -292,7 +324,7 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
           className={`tooltip-info relative w-fit bg-transparent p-0 leading-normal shadow-none dark:bg-transparent ${
             wordDictationConfig.isOpen ? 'tooltip' : ''
           }`}
-          data-tip="按 Tab 快捷键显示完整单词"
+          data-tip={isZhToEnMode ? `按 ${CTRL} + J 显示音标并朗读，按 Tab 显示完整单词` : '按 Tab 快捷键显示完整单词'}
         >
           <div
             onMouseEnter={() => handleHoverWord(true)}

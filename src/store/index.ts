@@ -74,6 +74,14 @@ export const isShowPrevAndNextWordAtom = atomWithStorage('isShowPrevAndNextWord'
 
 export const isIgnoreCaseAtom = atomWithStorage('isIgnoreCase', true)
 
+/**
+ * 输错时是否只拒绝错误字符。
+ *
+ * false（默认）：沿用原有行为，输错会清空整个单词并重来。
+ * true：错误字符不写入输入，已输入的正确部分保留，可以继续输入。
+ */
+export const isRejectWrongCharAtom = atomWithStorage('isRejectWrongChar', false)
+
 export const isShowAnswerOnHoverAtom = atomWithStorage('isShowAnswerOnHover', true)
 
 export const isTextSelectableAtom = atomWithStorage('isTextSelectable', false)

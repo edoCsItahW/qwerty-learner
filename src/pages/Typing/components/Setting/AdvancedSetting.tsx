@@ -1,5 +1,12 @@
 import styles from './index.module.css'
-import { isIgnoreCaseAtom, isShowAnswerOnHoverAtom, isShowPrevAndNextWordAtom, isTextSelectableAtom, randomConfigAtom } from '@/store'
+import {
+  isIgnoreCaseAtom,
+  isRejectWrongCharAtom,
+  isShowAnswerOnHoverAtom,
+  isShowPrevAndNextWordAtom,
+  isTextSelectableAtom,
+  randomConfigAtom,
+} from '@/store'
 import { Switch } from '@headlessui/react'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
 import { useAtom } from 'jotai'
@@ -9,6 +16,7 @@ export default function AdvancedSetting() {
   const [randomConfig, setRandomConfig] = useAtom(randomConfigAtom)
   const [isShowPrevAndNextWord, setIsShowPrevAndNextWord] = useAtom(isShowPrevAndNextWordAtom)
   const [isIgnoreCase, setIsIgnoreCase] = useAtom(isIgnoreCaseAtom)
+  const [isRejectWrongChar, setIsRejectWrongChar] = useAtom(isRejectWrongCharAtom)
   const [isTextSelectable, setIsTextSelectable] = useAtom(isTextSelectableAtom)
   const [isShowAnswerOnHover, setIsShowAnswerOnHover] = useAtom(isShowAnswerOnHoverAtom)
 
@@ -34,6 +42,13 @@ export default function AdvancedSetting() {
       setIsIgnoreCase(checked)
     },
     [setIsIgnoreCase],
+  )
+
+  const onToggleRejectWrongChar = useCallback(
+    (checked: boolean) => {
+      setIsRejectWrongChar(checked)
+    },
+    [setIsRejectWrongChar],
   )
 
   const onToggleTextSelectable = useCallback(
@@ -86,6 +101,20 @@ export default function AdvancedSetting() {
               </Switch>
               <span className="text-right text-xs font-normal leading-tight text-gray-600">{`忽略大小写已${
                 isIgnoreCase ? '开启' : '关闭'
+              }`}</span>
+            </div>
+          </div>
+          <div className={styles.section}>
+            <span className={styles.sectionLabel}>输错时只拒绝错误字符</span>
+            <span className={styles.sectionDescription}>
+              开启后，输错的字符会被直接拒绝，已经输入的正确字母会保留，可以继续输入；关闭后，输错会清空整个单词并从头开始。
+            </span>
+            <div className={styles.switchBlock}>
+              <Switch checked={isRejectWrongChar} onChange={onToggleRejectWrongChar} className="switch-root">
+                <span aria-hidden="true" className="switch-thumb" />
+              </Switch>
+              <span className="text-right text-xs font-normal leading-tight text-gray-600">{`仅拒绝错误字符已${
+                isRejectWrongChar ? '开启' : '关闭'
               }`}</span>
             </div>
           </div>

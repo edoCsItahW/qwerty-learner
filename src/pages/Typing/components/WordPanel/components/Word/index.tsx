@@ -19,6 +19,7 @@ import {
   fontSizeConfigAtom,
   isIgnoreCaseAtom,
   isPhoneticHintVisibleAtom,
+  isRejectWrongCharAtom,
   isShowAnswerOnHoverAtom,
   isTextSelectableAtom,
   pronunciationIsOpenAtom,
@@ -69,6 +70,7 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
   const setIsPhoneticHintVisible = useSetAtom(isPhoneticHintVisibleAtom)
   const isTextSelectable = useAtomValue(isTextSelectableAtom)
   const isIgnoreCase = useAtomValue(isIgnoreCaseAtom)
+  const isRejectWrongChar = useAtomValue(isRejectWrongCharAtom)
   const isShowAnswerOnHover = useAtomValue(isShowAnswerOnHoverAtom)
   const saveWordRecord = useSaveWordRecord()
   // const wordLogUploader = useMixPanelWordLogUploader(state)
@@ -118,10 +120,12 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
             updateAction.event.preventDefault()
             setWordState((state) => {
               state.inputWord = state.inputWord + EXPLICIT_SPACE
+              state.suppressValidationUntilNextInput = false
             })
           } else {
             setWordState((state) => {
               state.inputWord = state.inputWord + updateAction.value
+              state.suppressValidationUntilNextInput = false
             })
           }
           break
@@ -231,7 +235,7 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
      * 目前不影响生产环境，猜测是因为开发环境下 react 会两次调用 useEffect 从而展示了这个 warning
      * 但这终究是一个 bug，需要修复
      */
-    if (wordState.hasWrong || inputLength === 0 || wordState.displayWord.length === 0) {
+    if (wordState.hasWrong || wordState.suppressValidationUntilNextInput || inputLength === 0 || wordState.displayWord.length === 0) {
       return
     }
 
@@ -273,7 +277,10 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
         state.hasWrong = true
         state.hasMadeInputWrong = true
         state.wrongCount += 1
-        state.letterTimeArray = []
+        // 仅拒绝错误字符的模式下保留已输入内容的计时，继续累计即可
+        if (!isRejectWrongChar) {
+          state.letterTimeArray = []
+        }
 
         if (state.letterMistake[inputLength - 1]) {
           state.letterMistake[inputLength - 1].push(inputChar)
@@ -294,19 +301,30 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
 
   useEffect(() => {
     if (wordState.hasWrong) {
-      const timer = setTimeout(() => {
-        setWordState((state) => {
-          state.inputWord = ''
-          state.letterStates = new Array(state.letterStates.length).fill('normal')
-          state.hasWrong = false
-        })
-      }, 300)
+      const timer = setTimeout(
+        () => {
+          setWordState((state) => {
+            if (isRejectWrongChar) {
+              // 只移除刚输入的错误字符，保留之前已经输入正确的内容
+              state.inputWord = state.inputWord.slice(0, -1)
+              state.letterStates[state.inputWord.length] = 'normal'
+              // 裁掉错误字符后会再次触发输入校验，标记一次跳过避免重复计数
+              state.suppressValidationUntilNextInput = true
+            } else {
+              state.inputWord = ''
+              state.letterStates = new Array(state.letterStates.length).fill('normal')
+            }
+            state.hasWrong = false
+          })
+        },
+        isRejectWrongChar ? 150 : 300,
+      )
 
       return () => {
         clearTimeout(timer)
       }
     }
-  }, [wordState.hasWrong, setWordState])
+  }, [isRejectWrongChar, wordState.hasWrong, setWordState])
 
   useEffect(() => {
     if (wordState.isFinished) {

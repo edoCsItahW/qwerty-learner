@@ -8,6 +8,8 @@ export type WordState = {
   isFinished: boolean
   // 是否出现输入错误
   hasWrong: boolean
+  // 拒绝错误字符后，下一次输入前跳过旧输入的重复校验
+  suppressValidationUntilNextInput: boolean
   // 记录是否已经出现过输入错误
   hasMadeInputWrong: boolean
   // 用户输入错误的次数
@@ -28,6 +30,7 @@ export const initialWordState: WordState = {
   letterStates: [],
   isFinished: false,
   hasWrong: false,
+  suppressValidationUntilNextInput: false,
   hasMadeInputWrong: false,
   wrongCount: 0,
   startTime: '',

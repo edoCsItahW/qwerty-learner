@@ -18,6 +18,13 @@ const stateClassNameMap: Record<string, Record<LetterState, string>> = {
   },
 }
 
+// 真实的 _ 用绿色标出，避免与“隐藏字母”的占位 _ 混淆
+const realUnderscoreClassNameMap: Record<LetterState, string> = {
+  normal: 'text-green-500 dark:text-green-400',
+  correct: 'text-green-600 dark:text-green-400',
+  wrong: 'text-red-600 dark:text-red-400',
+}
+
 export type LetterProps = {
   letter: string
   state?: LetterState
@@ -29,11 +36,14 @@ export type LetterProps = {
 const Letter: React.FC<LetterProps> = ({ letter, state = 'normal', visible = true, fontSize }) => {
   const fontSizeConfig = useAtomValue(fontSizeConfigAtom)
   const letterFontSize = fontSize ?? fontSizeConfig.foreignFont
+  // 真实的 _ 与“隐藏字母”的占位 _ 区分开：真实的下划线显示为绿色
+  const isRealUnderscore = letter === '_'
+  const letterStateClassName = isRealUnderscore
+    ? realUnderscoreClassNameMap[state]
+    : stateClassNameMap[(letter === EXPLICIT_SPACE) as unknown as string][state]
   return (
     <span
-      className={`m-0 p-0 font-mono font-normal ${
-        stateClassNameMap[(letter === EXPLICIT_SPACE) as unknown as string][state]
-      } pr-0.8 duration-0 dark:text-opacity-80`}
+      className={`m-0 p-0 font-mono font-normal ${letterStateClassName} pr-0.8 duration-0 dark:text-opacity-80`}
       style={{ fontSize: letterFontSize.toString() + 'px' }}
     >
       {visible ? letter : '_'}

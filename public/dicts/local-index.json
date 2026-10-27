@@ -1,4 +1,44 @@
 {
-    "dictionaries": [],
+    "dictionaries": [
+        {
+            "id": "cet4_composition_fragment",
+            "name": "英语四级作文片段",
+            "description": "英语四级作文片段",
+            "category": "个人词典",
+            "tags": [
+                "个人"
+            ],
+            "url": "/dicts/cet4_composition_fragment.json",
+            "length": 39,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_proverb",
+            "name": "英语四级谚语",
+            "description": "英语四级谚语",
+            "category": "个人词典",
+            "tags": [
+                "个人"
+            ],
+            "url": "/dicts/cet4_proverb.json",
+            "length": 74,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_composition_template_simple",
+            "name": "英语四级简单作文模板",
+            "description": "英语四级简单作文模板",
+            "category": "个人词典",
+            "tags": [
+                "个人"
+            ],
+            "url": "/dicts/cet4_composition_template_simple.json",
+            "length": 27,
+            "language": "en",
+            "languageCategory": "en"
+        }
+    ],
     "lengthOverrides": {}
 }

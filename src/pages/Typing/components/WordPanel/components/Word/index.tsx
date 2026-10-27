@@ -34,6 +34,10 @@ import { useHotkeys } from 'react-hotkeys-hook'
 import { useImmer } from 'use-immer'
 
 const vowelLetters = ['A', 'E', 'I', 'O', 'U']
+const LETTER_PATTERN = /^\p{L}$/u
+
+/** 判断单个字符是否是字母（含中文、日文、德文等 Unicode 字母） */
+const isLetterChar = (char: string | undefined): boolean => char !== undefined && LETTER_PATTERN.test(char)
 
 export default function WordComponent({ word, onFinish }: { word: Word; onFinish: () => void }) {
   // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
@@ -197,6 +201,9 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
 
   const getLetterVisible = useCallback(
     (index: number) => {
+      const char = wordState.displayWord[index]
+      // 非字母内容（标点、空格、下划线等）始终直接显示，不参与默写隐藏
+      if (char !== undefined && !isLetterChar(char)) return true
       if (wordState.letterStates[index] === 'correct' || (isShowAnswerOnHover && isHoveringWord)) return true
 
       if (wordDictationConfig.isOpen) {
@@ -240,31 +247,84 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
     }
 
     const inputChar = wordState.inputWord[inputLength - 1]
-    const correctChar = wordState.displayWord[inputLength - 1]
+    const inputStartIndex = inputLength - 1
+    const expectedChar = wordState.displayWord[inputStartIndex]
+    if (inputChar === undefined || expectedChar === undefined) {
+      return
+    }
+
+    let targetIndex = inputStartIndex
+    let alignedInput = wordState.inputWord
+    let skippedSymbolsCount = 0
+
+    // 输入字母时，允许自动跳过当前位置的非字母内容（标点、空格、下划线等）
+    if (isLetterChar(inputChar) && !isLetterChar(expectedChar)) {
+      let nextLetterIndex = inputStartIndex
+      while (nextLetterIndex < wordState.displayWord.length && !isLetterChar(wordState.displayWord[nextLetterIndex])) {
+        nextLetterIndex += 1
+      }
+
+      if (nextLetterIndex >= wordState.displayWord.length) {
+        // 后面已经没有字母了：跳过剩余符号并直接完成单词
+        const prefix = wordState.inputWord.slice(0, inputStartIndex)
+        const remainingSymbols = wordState.displayWord.slice(inputStartIndex)
+        setWordState((state) => {
+          state.inputWord = prefix + remainingSymbols
+          for (let index = inputStartIndex; index < state.letterStates.length; index += 1) {
+            state.letterStates[index] = 'correct'
+          }
+          state.isFinished = true
+          state.endTime = getUtcStringForMixpanel()
+          state.suppressValidationUntilNextInput = true
+        })
+        playHintSound()
+        return
+      }
+
+      targetIndex = nextLetterIndex
+      skippedSymbolsCount = targetIndex - inputStartIndex
+      const prefix = wordState.inputWord.slice(0, inputStartIndex)
+      const skippedSymbols = wordState.displayWord.slice(inputStartIndex, targetIndex)
+      alignedInput = prefix + skippedSymbols + inputChar
+    }
+
+    const correctChar = wordState.displayWord[targetIndex]
     let isEqual = false
-    if (inputChar != undefined && correctChar != undefined) {
+    if (correctChar !== undefined) {
       isEqual = isIgnoreCase ? inputChar.toLowerCase() === correctChar.toLowerCase() : inputChar === correctChar
     }
+
+    const hasRemainingLetters = wordState.displayWord
+      .slice(targetIndex + 1)
+      .split('')
+      .some((char) => isLetterChar(char))
+    // 最后一个字母输入完成后，后面的符号不再强制要求输入；全符号词仍需要输入完整
+    const shouldFinish = !hasRemainingLetters && (isLetterChar(inputChar) || inputLength >= wordState.displayWord.length)
 
     if (isEqual) {
       // 输入正确时
       setWordState((state) => {
+        if (skippedSymbolsCount > 0) {
+          state.inputWord = alignedInput
+          for (let index = inputStartIndex; index < targetIndex; index += 1) {
+            state.letterStates[index] = 'correct'
+          }
+          state.suppressValidationUntilNextInput = true
+        }
+
         state.letterTimeArray.push(Date.now())
         state.correctCount += 1
-      })
+        state.letterStates[targetIndex] = 'correct'
 
-      if (inputLength >= wordState.displayWord.length) {
-        // 完成输入时
-        setWordState((state) => {
-          state.letterStates[inputLength - 1] = 'correct'
+        if (shouldFinish) {
           state.isFinished = true
           state.endTime = getUtcStringForMixpanel()
-        })
+        }
+      })
+
+      if (shouldFinish) {
         playHintSound()
       } else {
-        setWordState((state) => {
-          state.letterStates[inputLength - 1] = 'correct'
-        })
         playKeySound()
       }
 
@@ -273,7 +333,14 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
       // 出错时
       playBeepSound()
       setWordState((state) => {
-        state.letterStates[inputLength - 1] = 'wrong'
+        if (skippedSymbolsCount > 0) {
+          state.inputWord = alignedInput
+          for (let index = inputStartIndex; index < targetIndex; index += 1) {
+            state.letterStates[index] = 'correct'
+          }
+        }
+
+        state.letterStates[targetIndex] = 'wrong'
         state.hasWrong = true
         state.hasMadeInputWrong = true
         state.wrongCount += 1
@@ -282,10 +349,10 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
           state.letterTimeArray = []
         }
 
-        if (state.letterMistake[inputLength - 1]) {
-          state.letterMistake[inputLength - 1].push(inputChar)
+        if (state.letterMistake[targetIndex]) {
+          state.letterMistake[targetIndex].push(inputChar)
         } else {
-          state.letterMistake[inputLength - 1] = [inputChar]
+          state.letterMistake[targetIndex] = [inputChar]
         }
 
         const currentState = JSON.parse(JSON.stringify(state))

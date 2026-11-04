@@ -1,0 +1,26 @@
+[
+    {
+        "name": "independence",
+        "trans": [
+            "独立性"
+        ]
+    },
+    {
+        "name": "income",
+        "trans": [
+            "收入"
+        ]
+    },
+    {
+        "name": "resume",
+        "trans": [
+            "简历"
+        ]
+    },
+    {
+        "name": "interview",
+        "trans": [
+            "面试"
+        ]
+    }
+]

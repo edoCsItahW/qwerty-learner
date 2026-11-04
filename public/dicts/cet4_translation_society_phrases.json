@@ -1,0 +1,272 @@
+[
+    {
+        "name": "play a role in",
+        "trans": [
+            "在……中发挥作用"
+        ]
+    },
+    {
+        "name": "make a contribution to",
+        "trans": [
+            "为……做贡献"
+        ]
+    },
+    {
+        "name": "pay attention to",
+        "trans": [
+            "关注"
+        ]
+    },
+    {
+        "name": "care for",
+        "trans": [
+            "关心；照顾"
+        ]
+    },
+    {
+        "name": "take measures to",
+        "trans": [
+            "采取措施做……"
+        ]
+    },
+    {
+        "name": "deal with / cope with",
+        "trans": [
+            "应对；处理"
+        ]
+    },
+    {
+        "name": "solve a problem",
+        "trans": [
+            "解决问题"
+        ]
+    },
+    {
+        "name": "improve living standards",
+        "trans": [
+            "提高生活水平"
+        ]
+    },
+    {
+        "name": "narrow the gap",
+        "trans": [
+            "缩小差距"
+        ]
+    },
+    {
+        "name": "provide support for",
+        "trans": [
+            "为……提供支持"
+        ]
+    },
+    {
+        "name": "have access to",
+        "trans": [
+            "能够获得/使用"
+        ]
+    },
+    {
+        "name": "raise awareness of",
+        "trans": [
+            "提高对……的认识"
+        ]
+    },
+    {
+        "name": "take part in",
+        "trans": [
+            "参加"
+        ]
+    },
+    {
+        "name": "benefit from",
+        "trans": [
+            "从……中受益"
+        ]
+    },
+    {
+        "name": "be faced with",
+        "trans": [
+            "面临"
+        ]
+    },
+    {
+        "name": "adapt to",
+        "trans": [
+            "适应"
+        ]
+    },
+    {
+        "name": "lead to",
+        "trans": [
+            "导致"
+        ]
+    },
+    {
+        "name": "result in",
+        "trans": [
+            "导致"
+        ]
+    },
+    {
+        "name": "be responsible for",
+        "trans": [
+            "对……负责"
+        ]
+    },
+    {
+        "name": "build a harmonious society",
+        "trans": [
+            "建设和谐社会"
+        ]
+    },
+    {
+        "name": "social problem",
+        "trans": [
+            "社会问题"
+        ]
+    },
+    {
+        "name": "social development",
+        "trans": [
+            "社会发展"
+        ]
+    },
+    {
+        "name": "social stability",
+        "trans": [
+            "社会稳定"
+        ]
+    },
+    {
+        "name": "social harmony",
+        "trans": [
+            "社会和谐"
+        ]
+    },
+    {
+        "name": "social responsibility",
+        "trans": [
+            "社会责任"
+        ]
+    },
+    {
+        "name": "social welfare",
+        "trans": [
+            "社会福利"
+        ]
+    },
+    {
+        "name": "social security",
+        "trans": [
+            "社会保障"
+        ]
+    },
+    {
+        "name": "social justice",
+        "trans": [
+            "社会公平正义"
+        ]
+    },
+    {
+        "name": "social equality",
+        "trans": [
+            "社会平等"
+        ]
+    },
+    {
+        "name": "public service",
+        "trans": [
+            "公共服务"
+        ]
+    },
+    {
+        "name": "public facilities",
+        "trans": [
+            "公共设施"
+        ]
+    },
+    {
+        "name": "public transportation",
+        "trans": [
+            "公共交通"
+        ]
+    },
+    {
+        "name": "aging population",
+        "trans": [
+            "人口老龄化"
+        ]
+    },
+    {
+        "name": "income gap",
+        "trans": [
+            "收入差距"
+        ]
+    },
+    {
+        "name": "urban-rural gap",
+        "trans": [
+            "城乡差距"
+        ]
+    },
+    {
+        "name": "employment pressure",
+        "trans": [
+            "就业压力"
+        ]
+    },
+    {
+        "name": "living standard",
+        "trans": [
+            "生活水平"
+        ]
+    },
+    {
+        "name": "quality of life",
+        "trans": [
+            "生活质量"
+        ]
+    },
+    {
+        "name": "community service",
+        "trans": [
+            "社区服务"
+        ]
+    },
+    {
+        "name": "volunteer work",
+        "trans": [
+            "志愿工作"
+        ]
+    },
+    {
+        "name": "charitable activity",
+        "trans": [
+            "慈善活动"
+        ]
+    },
+    {
+        "name": "care for the elderly",
+        "trans": [
+            "关爱老年人"
+        ]
+    },
+    {
+        "name": "left-behind children",
+        "trans": [
+            "留守儿童"
+        ]
+    },
+    {
+        "name": "mental health",
+        "trans": [
+            "心理健康"
+        ]
+    },
+    {
+        "name": "harmonious society",
+        "trans": [
+            "和谐社会"
+        ]
+    }
+]

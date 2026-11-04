@@ -38,6 +38,692 @@
             "length": 27,
             "language": "en",
             "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_tradition_words",
+            "name": "四级翻译·传统·单词",
+            "description": "四级翻译「传统」主题单词（来源：传统相关.md）",
+            "category": "四级翻译·传统",
+            "tags": [
+                "传统",
+                "单词"
+            ],
+            "url": "/dicts/cet4_translation_tradition_words.json",
+            "length": 27,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_tradition_phrases",
+            "name": "四级翻译·传统·短语",
+            "description": "四级翻译「传统」主题短语（来源：传统相关.md）",
+            "category": "四级翻译·传统",
+            "tags": [
+                "传统",
+                "短语"
+            ],
+            "url": "/dicts/cet4_translation_tradition_phrases.json",
+            "length": 39,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_tradition_sentences",
+            "name": "四级翻译·传统·句子",
+            "description": "四级翻译「传统」主题句子（来源：传统相关.md）",
+            "category": "四级翻译·传统",
+            "tags": [
+                "传统",
+                "句子"
+            ],
+            "url": "/dicts/cet4_translation_tradition_sentences.json",
+            "length": 15,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_education_words",
+            "name": "四级翻译·教育·单词",
+            "description": "四级翻译「教育」主题单词（来源：教育相关.md）",
+            "category": "四级翻译·教育",
+            "tags": [
+                "教育",
+                "单词"
+            ],
+            "url": "/dicts/cet4_translation_education_words.json",
+            "length": 36,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_education_phrases",
+            "name": "四级翻译·教育·短语",
+            "description": "四级翻译「教育」主题短语（来源：教育相关.md）",
+            "category": "四级翻译·教育",
+            "tags": [
+                "教育",
+                "短语"
+            ],
+            "url": "/dicts/cet4_translation_education_phrases.json",
+            "length": 45,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_education_sentences",
+            "name": "四级翻译·教育·句子",
+            "description": "四级翻译「教育」主题句子（来源：教育相关.md）",
+            "category": "四级翻译·教育",
+            "tags": [
+                "教育",
+                "句子"
+            ],
+            "url": "/dicts/cet4_translation_education_sentences.json",
+            "length": 10,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_festival_words",
+            "name": "四级翻译·节日·单词",
+            "description": "四级翻译「节日」主题单词（来源：节日相关.md）",
+            "category": "四级翻译·节日",
+            "tags": [
+                "节日",
+                "单词"
+            ],
+            "url": "/dicts/cet4_translation_festival_words.json",
+            "length": 31,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_festival_phrases",
+            "name": "四级翻译·节日·短语",
+            "description": "四级翻译「节日」主题短语（来源：节日相关.md）",
+            "category": "四级翻译·节日",
+            "tags": [
+                "节日",
+                "短语"
+            ],
+            "url": "/dicts/cet4_translation_festival_phrases.json",
+            "length": 55,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_festival_sentences",
+            "name": "四级翻译·节日·句子",
+            "description": "四级翻译「节日」主题句子（来源：节日相关.md）",
+            "category": "四级翻译·节日",
+            "tags": [
+                "节日",
+                "句子"
+            ],
+            "url": "/dicts/cet4_translation_festival_sentences.json",
+            "length": 15,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_economy_words",
+            "name": "四级翻译·经济·单词",
+            "description": "四级翻译「经济」主题单词（来源：经济相关.md）",
+            "category": "四级翻译·经济",
+            "tags": [
+                "经济",
+                "单词"
+            ],
+            "url": "/dicts/cet4_translation_economy_words.json",
+            "length": 32,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_economy_phrases",
+            "name": "四级翻译·经济·短语",
+            "description": "四级翻译「经济」主题短语（来源：经济相关.md）",
+            "category": "四级翻译·经济",
+            "tags": [
+                "经济",
+                "短语"
+            ],
+            "url": "/dicts/cet4_translation_economy_phrases.json",
+            "length": 46,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_economy_sentences",
+            "name": "四级翻译·经济·句子",
+            "description": "四级翻译「经济」主题句子（来源：经济相关.md）",
+            "category": "四级翻译·经济",
+            "tags": [
+                "经济",
+                "句子"
+            ],
+            "url": "/dicts/cet4_translation_economy_sentences.json",
+            "length": 15,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_technology_words",
+            "name": "四级翻译·科技·单词",
+            "description": "四级翻译「科技」主题单词（来源：科技相关.md）",
+            "category": "四级翻译·科技",
+            "tags": [
+                "科技",
+                "单词"
+            ],
+            "url": "/dicts/cet4_translation_technology_words.json",
+            "length": 31,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_technology_phrases",
+            "name": "四级翻译·科技·短语",
+            "description": "四级翻译「科技」主题短语（来源：科技相关.md）",
+            "category": "四级翻译·科技",
+            "tags": [
+                "科技",
+                "短语"
+            ],
+            "url": "/dicts/cet4_translation_technology_phrases.json",
+            "length": 44,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_technology_sentences",
+            "name": "四级翻译·科技·句子",
+            "description": "四级翻译「科技」主题句子（来源：科技相关.md）",
+            "category": "四级翻译·科技",
+            "tags": [
+                "科技",
+                "句子"
+            ],
+            "url": "/dicts/cet4_translation_technology_sentences.json",
+            "length": 15,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_society_words",
+            "name": "四级翻译·社会·单词",
+            "description": "四级翻译「社会」主题单词（来源：社会相关.md）",
+            "category": "四级翻译·社会",
+            "tags": [
+                "社会",
+                "单词"
+            ],
+            "url": "/dicts/cet4_translation_society_words.json",
+            "length": 37,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_society_phrases",
+            "name": "四级翻译·社会·短语",
+            "description": "四级翻译「社会」主题短语（来源：社会相关.md）",
+            "category": "四级翻译·社会",
+            "tags": [
+                "社会",
+                "短语"
+            ],
+            "url": "/dicts/cet4_translation_society_phrases.json",
+            "length": 45,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_society_sentences",
+            "name": "四级翻译·社会·句子",
+            "description": "四级翻译「社会」主题句子（来源：社会相关.md）",
+            "category": "四级翻译·社会",
+            "tags": [
+                "社会",
+                "句子"
+            ],
+            "url": "/dicts/cet4_translation_society_sentences.json",
+            "length": 15,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_culture_words",
+            "name": "四级翻译·文化·单词",
+            "description": "四级翻译「文化」主题单词（来源：文法相关.md）",
+            "category": "四级翻译·文化",
+            "tags": [
+                "文化",
+                "单词"
+            ],
+            "url": "/dicts/cet4_translation_culture_words.json",
+            "length": 32,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_culture_phrases",
+            "name": "四级翻译·文化·短语",
+            "description": "四级翻译「文化」主题短语（来源：文法相关.md）",
+            "category": "四级翻译·文化",
+            "tags": [
+                "文化",
+                "短语"
+            ],
+            "url": "/dicts/cet4_translation_culture_phrases.json",
+            "length": 44,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_translation_culture_sentences",
+            "name": "四级翻译·文化·句子",
+            "description": "四级翻译「文化」主题句子（来源：文法相关.md）",
+            "category": "四级翻译·文化",
+            "tags": [
+                "文化",
+                "句子"
+            ],
+            "url": "/dicts/cet4_translation_culture_sentences.json",
+            "length": 15,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_traditional_culture_words",
+            "name": "四级作文·传统文化·单词",
+            "description": "四级作文「传统文化」主题单词（来源：传统文化话题.md）",
+            "category": "四级作文·传统文化",
+            "tags": [
+                "传统文化",
+                "单词"
+            ],
+            "url": "/dicts/cet4_writing_traditional_culture_words.json",
+            "length": 3,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_traditional_culture_phrases",
+            "name": "四级作文·传统文化·短语",
+            "description": "四级作文「传统文化」主题短语（来源：传统文化话题.md）",
+            "category": "四级作文·传统文化",
+            "tags": [
+                "传统文化",
+                "短语"
+            ],
+            "url": "/dicts/cet4_writing_traditional_culture_phrases.json",
+            "length": 47,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_traditional_culture_sentences",
+            "name": "四级作文·传统文化·句子",
+            "description": "四级作文「传统文化」主题句子（来源：传统文化话题.md）",
+            "category": "四级作文·传统文化",
+            "tags": [
+                "传统文化",
+                "句子"
+            ],
+            "url": "/dicts/cet4_writing_traditional_culture_sentences.json",
+            "length": 18,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_environment_words",
+            "name": "四级作文·环保·单词",
+            "description": "四级作文「环保」主题单词（来源：环保话题.md）",
+            "category": "四级作文·环保",
+            "tags": [
+                "环保",
+                "单词"
+            ],
+            "url": "/dicts/cet4_writing_environment_words.json",
+            "length": 2,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_environment_phrases",
+            "name": "四级作文·环保·短语",
+            "description": "四级作文「环保」主题短语（来源：环保话题.md）",
+            "category": "四级作文·环保",
+            "tags": [
+                "环保",
+                "短语"
+            ],
+            "url": "/dicts/cet4_writing_environment_phrases.json",
+            "length": 48,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_environment_sentences",
+            "name": "四级作文·环保·句子",
+            "description": "四级作文「环保」主题句子（来源：环保话题.md）",
+            "category": "四级作文·环保",
+            "tags": [
+                "环保",
+                "句子"
+            ],
+            "url": "/dicts/cet4_writing_environment_sentences.json",
+            "length": 18,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_part_time_job_words",
+            "name": "四级作文·兼职·单词",
+            "description": "四级作文「兼职」主题单词（来源：兼职话题.md）",
+            "category": "四级作文·兼职",
+            "tags": [
+                "兼职",
+                "单词"
+            ],
+            "url": "/dicts/cet4_writing_part_time_job_words.json",
+            "length": 4,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_part_time_job_phrases",
+            "name": "四级作文·兼职·短语",
+            "description": "四级作文「兼职」主题短语（来源：兼职话题.md）",
+            "category": "四级作文·兼职",
+            "tags": [
+                "兼职",
+                "短语"
+            ],
+            "url": "/dicts/cet4_writing_part_time_job_phrases.json",
+            "length": 46,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_part_time_job_sentences",
+            "name": "四级作文·兼职·句子",
+            "description": "四级作文「兼职」主题句子（来源：兼职话题.md）",
+            "category": "四级作文·兼职",
+            "tags": [
+                "兼职",
+                "句子"
+            ],
+            "url": "/dicts/cet4_writing_part_time_job_sentences.json",
+            "length": 18,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_health_words",
+            "name": "四级作文·健康·单词",
+            "description": "四级作文「健康」主题单词（来源：健康话题.md）",
+            "category": "四级作文·健康",
+            "tags": [
+                "健康",
+                "单词"
+            ],
+            "url": "/dicts/cet4_writing_health_words.json",
+            "length": 5,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_health_phrases",
+            "name": "四级作文·健康·短语",
+            "description": "四级作文「健康」主题短语（来源：健康话题.md）",
+            "category": "四级作文·健康",
+            "tags": [
+                "健康",
+                "短语"
+            ],
+            "url": "/dicts/cet4_writing_health_phrases.json",
+            "length": 45,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_health_sentences",
+            "name": "四级作文·健康·句子",
+            "description": "四级作文「健康」主题句子（来源：健康话题.md）",
+            "category": "四级作文·健康",
+            "tags": [
+                "健康",
+                "句子"
+            ],
+            "url": "/dicts/cet4_writing_health_sentences.json",
+            "length": 18,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_interpersonal_words",
+            "name": "四级作文·人际交往·单词",
+            "description": "四级作文「人际交往」主题单词（来源：人际交往话题.md）",
+            "category": "四级作文·人际交往",
+            "tags": [
+                "人际交往",
+                "单词"
+            ],
+            "url": "/dicts/cet4_writing_interpersonal_words.json",
+            "length": 8,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_interpersonal_phrases",
+            "name": "四级作文·人际交往·短语",
+            "description": "四级作文「人际交往」主题短语（来源：人际交往话题.md）",
+            "category": "四级作文·人际交往",
+            "tags": [
+                "人际交往",
+                "短语"
+            ],
+            "url": "/dicts/cet4_writing_interpersonal_phrases.json",
+            "length": 42,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_interpersonal_sentences",
+            "name": "四级作文·人际交往·句子",
+            "description": "四级作文「人际交往」主题句子（来源：人际交往话题.md）",
+            "category": "四级作文·人际交往",
+            "tags": [
+                "人际交往",
+                "句子"
+            ],
+            "url": "/dicts/cet4_writing_interpersonal_sentences.json",
+            "length": 18,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_network_technology_words",
+            "name": "四级作文·网络科技·单词",
+            "description": "四级作文「网络科技」主题单词（来源：网络科技话题.md）",
+            "category": "四级作文·网络科技",
+            "tags": [
+                "网络科技",
+                "单词"
+            ],
+            "url": "/dicts/cet4_writing_network_technology_words.json",
+            "length": 4,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_network_technology_phrases",
+            "name": "四级作文·网络科技·短语",
+            "description": "四级作文「网络科技」主题短语（来源：网络科技话题.md）",
+            "category": "四级作文·网络科技",
+            "tags": [
+                "网络科技",
+                "短语"
+            ],
+            "url": "/dicts/cet4_writing_network_technology_phrases.json",
+            "length": 46,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_network_technology_sentences",
+            "name": "四级作文·网络科技·句子",
+            "description": "四级作文「网络科技」主题句子（来源：网络科技话题.md）",
+            "category": "四级作文·网络科技",
+            "tags": [
+                "网络科技",
+                "句子"
+            ],
+            "url": "/dicts/cet4_writing_network_technology_sentences.json",
+            "length": 20,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_consumption_words",
+            "name": "四级作文·消费·单词",
+            "description": "四级作文「消费」主题单词（来源：消费话题.md）",
+            "category": "四级作文·消费",
+            "tags": [
+                "消费",
+                "单词"
+            ],
+            "url": "/dicts/cet4_writing_consumption_words.json",
+            "length": 4,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_consumption_phrases",
+            "name": "四级作文·消费·短语",
+            "description": "四级作文「消费」主题短语（来源：消费话题.md）",
+            "category": "四级作文·消费",
+            "tags": [
+                "消费",
+                "短语"
+            ],
+            "url": "/dicts/cet4_writing_consumption_phrases.json",
+            "length": 46,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_consumption_sentences",
+            "name": "四级作文·消费·句子",
+            "description": "四级作文「消费」主题句子（来源：消费话题.md）",
+            "category": "四级作文·消费",
+            "tags": [
+                "消费",
+                "句子"
+            ],
+            "url": "/dicts/cet4_writing_consumption_sentences.json",
+            "length": 18,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_campus_life_words",
+            "name": "四级作文·校园生活·单词",
+            "description": "四级作文「校园生活」主题单词（来源：校园生活话题.md）",
+            "category": "四级作文·校园生活",
+            "tags": [
+                "校园生活",
+                "单词"
+            ],
+            "url": "/dicts/cet4_writing_campus_life_words.json",
+            "length": 1,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_campus_life_phrases",
+            "name": "四级作文·校园生活·短语",
+            "description": "四级作文「校园生活」主题短语（来源：校园生活话题.md）",
+            "category": "四级作文·校园生活",
+            "tags": [
+                "校园生活",
+                "短语"
+            ],
+            "url": "/dicts/cet4_writing_campus_life_phrases.json",
+            "length": 49,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_campus_life_sentences",
+            "name": "四级作文·校园生活·句子",
+            "description": "四级作文「校园生活」主题句子（来源：校园生活话题.md）",
+            "category": "四级作文·校园生活",
+            "tags": [
+                "校园生活",
+                "句子"
+            ],
+            "url": "/dicts/cet4_writing_campus_life_sentences.json",
+            "length": 17,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_study_words",
+            "name": "四级作文·学习·单词",
+            "description": "四级作文「学习」主题单词（来源：学习话题.md）",
+            "category": "四级作文·学习",
+            "tags": [
+                "学习",
+                "单词"
+            ],
+            "url": "/dicts/cet4_writing_study_words.json",
+            "length": 9,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_study_phrases",
+            "name": "四级作文·学习·短语",
+            "description": "四级作文「学习」主题短语（来源：学习话题.md）",
+            "category": "四级作文·学习",
+            "tags": [
+                "学习",
+                "短语"
+            ],
+            "url": "/dicts/cet4_writing_study_phrases.json",
+            "length": 42,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_study_sentences",
+            "name": "四级作文·学习·句子",
+            "description": "四级作文「学习」主题句子（来源：学习话题.md）",
+            "category": "四级作文·学习",
+            "tags": [
+                "学习",
+                "句子"
+            ],
+            "url": "/dicts/cet4_writing_study_sentences.json",
+            "length": 16,
+            "language": "en",
+            "languageCategory": "en"
+        },
+        {
+            "id": "cet4_writing_functional_sentences",
+            "name": "四级作文·功能句·句子",
+            "description": "四级作文「功能句」主题句子（来源：功能句.md）",
+            "category": "四级作文·功能句",
+            "tags": [
+                "功能句",
+                "句子"
+            ],
+            "url": "/dicts/cet4_writing_functional_sentences.json",
+            "length": 35,
+            "language": "en",
+            "languageCategory": "en"
         }
     ],
     "lengthOverrides": {}

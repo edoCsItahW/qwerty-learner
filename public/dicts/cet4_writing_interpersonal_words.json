@@ -1,0 +1,50 @@
+[
+    {
+        "name": "sincerity",
+        "trans": [
+            "真诚"
+        ]
+    },
+    {
+        "name": "honesty",
+        "trans": [
+            "诚实"
+        ]
+    },
+    {
+        "name": "tolerance",
+        "trans": [
+            "宽容"
+        ]
+    },
+    {
+        "name": "empathy",
+        "trans": [
+            "同理心"
+        ]
+    },
+    {
+        "name": "cooperation",
+        "trans": [
+            "合作"
+        ]
+    },
+    {
+        "name": "friendship",
+        "trans": [
+            "友谊"
+        ]
+    },
+    {
+        "name": "conflict",
+        "trans": [
+            "冲突"
+        ]
+    },
+    {
+        "name": "misunderstanding",
+        "trans": [
+            "误解"
+        ]
+    }
+]

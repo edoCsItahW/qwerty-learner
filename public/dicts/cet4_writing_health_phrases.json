@@ -1,0 +1,272 @@
+[
+    {
+        "name": "physical health",
+        "trans": [
+            "身体健康"
+        ]
+    },
+    {
+        "name": "mental health",
+        "trans": [
+            "心理健康"
+        ]
+    },
+    {
+        "name": "healthy lifestyle",
+        "trans": [
+            "健康的生活方式"
+        ]
+    },
+    {
+        "name": "health awareness",
+        "trans": [
+            "健康意识"
+        ]
+    },
+    {
+        "name": "health education",
+        "trans": [
+            "健康教育"
+        ]
+    },
+    {
+        "name": "balanced diet",
+        "trans": [
+            "均衡饮食"
+        ]
+    },
+    {
+        "name": "regular exercise",
+        "trans": [
+            "规律锻炼"
+        ]
+    },
+    {
+        "name": "enough sleep",
+        "trans": [
+            "充足睡眠"
+        ]
+    },
+    {
+        "name": "junk food",
+        "trans": [
+            "垃圾食品"
+        ]
+    },
+    {
+        "name": "sedentary lifestyle",
+        "trans": [
+            "久坐不动的生活方式"
+        ]
+    },
+    {
+        "name": "screen time",
+        "trans": [
+            "屏幕使用时间"
+        ]
+    },
+    {
+        "name": "stress / pressure",
+        "trans": [
+            "压力"
+        ]
+    },
+    {
+        "name": "positive attitude",
+        "trans": [
+            "积极态度"
+        ]
+    },
+    {
+        "name": "work-rest balance",
+        "trans": [
+            "劳逸结合"
+        ]
+    },
+    {
+        "name": "health care / medical care",
+        "trans": [
+            "医疗保健"
+        ]
+    },
+    {
+        "name": "physical and mental well-being",
+        "trans": [
+            "身心健康"
+        ]
+    },
+    {
+        "name": "healthy habits",
+        "trans": [
+            "健康习惯"
+        ]
+    },
+    {
+        "name": "staying up late",
+        "trans": [
+            "熬夜"
+        ]
+    },
+    {
+        "name": "smoking and drinking",
+        "trans": [
+            "吸烟饮酒"
+        ]
+    },
+    {
+        "name": "health problems",
+        "trans": [
+            "健康问题"
+        ]
+    },
+    {
+        "name": "keep fit / stay healthy",
+        "trans": [
+            "保持健康"
+        ]
+    },
+    {
+        "name": "build up one’s body",
+        "trans": [
+            "增强体质"
+        ]
+    },
+    {
+        "name": "take regular exercise",
+        "trans": [
+            "定期锻炼"
+        ]
+    },
+    {
+        "name": "form healthy eating habits",
+        "trans": [
+            "养成健康饮食习惯"
+        ]
+    },
+    {
+        "name": "keep a balanced diet",
+        "trans": [
+            "保持均衡饮食"
+        ]
+    },
+    {
+        "name": "eat more fruit and vegetables",
+        "trans": [
+            "多吃水果蔬菜"
+        ]
+    },
+    {
+        "name": "avoid junk food",
+        "trans": [
+            "避免垃圾食品"
+        ]
+    },
+    {
+        "name": "get enough sleep",
+        "trans": [
+            "获得充足睡眠"
+        ]
+    },
+    {
+        "name": "avoid staying up late",
+        "trans": [
+            "避免熬夜"
+        ]
+    },
+    {
+        "name": "reduce screen time",
+        "trans": [
+            "减少屏幕使用时间"
+        ]
+    },
+    {
+        "name": "relieve stress / pressure",
+        "trans": [
+            "缓解压力"
+        ]
+    },
+    {
+        "name": "maintain a positive attitude",
+        "trans": [
+            "保持积极态度"
+        ]
+    },
+    {
+        "name": "pay attention to mental health",
+        "trans": [
+            "关注心理健康"
+        ]
+    },
+    {
+        "name": "seek professional help",
+        "trans": [
+            "寻求专业帮助"
+        ]
+    },
+    {
+        "name": "strike a balance between work and rest",
+        "trans": [
+            "劳逸结合"
+        ]
+    },
+    {
+        "name": "develop health awareness",
+        "trans": [
+            "培养健康意识"
+        ]
+    },
+    {
+        "name": "receive health education",
+        "trans": [
+            "接受健康教育"
+        ]
+    },
+    {
+        "name": "take part in physical exercise",
+        "trans": [
+            "参加体育锻炼"
+        ]
+    },
+    {
+        "name": "improve physical and mental well-being",
+        "trans": [
+            "改善身心健康"
+        ]
+    },
+    {
+        "name": "prevent disease",
+        "trans": [
+            "预防疾病"
+        ]
+    },
+    {
+        "name": "lead a healthy lifestyle",
+        "trans": [
+            "过健康的生活方式"
+        ]
+    },
+    {
+        "name": "give up smoking",
+        "trans": [
+            "戒烟"
+        ]
+    },
+    {
+        "name": "control one’s weight",
+        "trans": [
+            "控制体重"
+        ]
+    },
+    {
+        "name": "stay away from bad habits",
+        "trans": [
+            "远离不良习惯"
+        ]
+    },
+    {
+        "name": "start from small things",
+        "trans": [
+            "从小事做起"
+        ]
+    }
+]

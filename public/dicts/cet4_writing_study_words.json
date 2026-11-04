@@ -1,0 +1,56 @@
+[
+    {
+        "name": "motivation",
+        "trans": [
+            "学习动力"
+        ]
+    },
+    {
+        "name": "self-discipline",
+        "trans": [
+            "自律"
+        ]
+    },
+    {
+        "name": "concentration",
+        "trans": [
+            "专注力"
+        ]
+    },
+    {
+        "name": "procrastination",
+        "trans": [
+            "拖延"
+        ]
+    },
+    {
+        "name": "distraction",
+        "trans": [
+            "分心"
+        ]
+    },
+    {
+        "name": "note-taking",
+        "trans": [
+            "记笔记"
+        ]
+    },
+    {
+        "name": "curiosity",
+        "trans": [
+            "好奇心"
+        ]
+    },
+    {
+        "name": "feedback",
+        "trans": [
+            "反馈"
+        ]
+    },
+    {
+        "name": "reflection",
+        "trans": [
+            "反思"
+        ]
+    }
+]

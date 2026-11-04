@@ -1,0 +1,272 @@
+[
+    {
+        "name": "receive education",
+        "trans": [
+            "接受教育"
+        ]
+    },
+    {
+        "name": "pursue higher education",
+        "trans": [
+            "接受高等教育"
+        ]
+    },
+    {
+        "name": "major in",
+        "trans": [
+            "主修"
+        ]
+    },
+    {
+        "name": "apply for admission to",
+        "trans": [
+            "申请进入……"
+        ]
+    },
+    {
+        "name": "be admitted to",
+        "trans": [
+            "被……录取"
+        ]
+    },
+    {
+        "name": "enroll in a course",
+        "trans": [
+            "报名参加课程"
+        ]
+    },
+    {
+        "name": "sign up for",
+        "trans": [
+            "报名参加"
+        ]
+    },
+    {
+        "name": "attend a lecture",
+        "trans": [
+            "听课；参加讲座"
+        ]
+    },
+    {
+        "name": "take notes",
+        "trans": [
+            "记笔记"
+        ]
+    },
+    {
+        "name": "hand in an assignment",
+        "trans": [
+            "交作业"
+        ]
+    },
+    {
+        "name": "meet the deadline",
+        "trans": [
+            "赶上截止日期"
+        ]
+    },
+    {
+        "name": "review lessons",
+        "trans": [
+            "复习功课"
+        ]
+    },
+    {
+        "name": "prepare for an exam",
+        "trans": [
+            "备考"
+        ]
+    },
+    {
+        "name": "pass an exam",
+        "trans": [
+            "通过考试"
+        ]
+    },
+    {
+        "name": "fail an exam",
+        "trans": [
+            "考试不及格"
+        ]
+    },
+    {
+        "name": "get a degree",
+        "trans": [
+            "获得学位"
+        ]
+    },
+    {
+        "name": "graduate from",
+        "trans": [
+            "毕业于"
+        ]
+    },
+    {
+        "name": "drop out of school",
+        "trans": [
+            "辍学"
+        ]
+    },
+    {
+        "name": "pay tuition fees",
+        "trans": [
+            "交学费"
+        ]
+    },
+    {
+        "name": "apply for a scholarship",
+        "trans": [
+            "申请奖学金"
+        ]
+    },
+    {
+        "name": "keep up with studies",
+        "trans": [
+            "跟上学习进度"
+        ]
+    },
+    {
+        "name": "fall behind",
+        "trans": [
+            "落后"
+        ]
+    },
+    {
+        "name": "catch up with",
+        "trans": [
+            "赶上"
+        ]
+    },
+    {
+        "name": "develop skills",
+        "trans": [
+            "培养技能"
+        ]
+    },
+    {
+        "name": "improve academic performance",
+        "trans": [
+            "提高学习成绩"
+        ]
+    },
+    {
+        "name": "compulsory education",
+        "trans": [
+            "义务教育"
+        ]
+    },
+    {
+        "name": "higher education",
+        "trans": [
+            "高等教育"
+        ]
+    },
+    {
+        "name": "vocational education",
+        "trans": [
+            "职业教育"
+        ]
+    },
+    {
+        "name": "quality education",
+        "trans": [
+            "素质教育"
+        ]
+    },
+    {
+        "name": "online learning",
+        "trans": [
+            "在线学习"
+        ]
+    },
+    {
+        "name": "distance education",
+        "trans": [
+            "远程教育"
+        ]
+    },
+    {
+        "name": "lifelong learning",
+        "trans": [
+            "终身学习"
+        ]
+    },
+    {
+        "name": "academic performance",
+        "trans": [
+            "学业表现"
+        ]
+    },
+    {
+        "name": "learning environment",
+        "trans": [
+            "学习环境"
+        ]
+    },
+    {
+        "name": "teaching method",
+        "trans": [
+            "教学方法"
+        ]
+    },
+    {
+        "name": "study habits",
+        "trans": [
+            "学习习惯"
+        ]
+    },
+    {
+        "name": "critical thinking",
+        "trans": [
+            "批判性思维"
+        ]
+    },
+    {
+        "name": "problem-solving skills",
+        "trans": [
+            "解决问题的能力"
+        ]
+    },
+    {
+        "name": "teamwork spirit",
+        "trans": [
+            "团队合作精神"
+        ]
+    },
+    {
+        "name": "equal access to education",
+        "trans": [
+            "平等受教育机会"
+        ]
+    },
+    {
+        "name": "educational resources",
+        "trans": [
+            "教育资源"
+        ]
+    },
+    {
+        "name": "entrance examination",
+        "trans": [
+            "入学考试"
+        ]
+    },
+    {
+        "name": "graduation ceremony",
+        "trans": [
+            "毕业典礼"
+        ]
+    },
+    {
+        "name": "academic pressure",
+        "trans": [
+            "学业压力"
+        ]
+    },
+    {
+        "name": "practical ability",
+        "trans": [
+            "实践能力"
+        ]
+    }
+]

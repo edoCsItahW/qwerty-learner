@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Technology has greatly changed our way of life.",
+        "trans": [
+            "科技极大地改变了我们的生活方式。"
+        ]
+    },
+    {
+        "name": "The Internet brings great convenience to our daily life.",
+        "trans": [
+            "互联网给我们的日常生活带来很大便利。"
+        ]
+    },
+    {
+        "name": "Online shopping allows people to buy things without going out.",
+        "trans": [
+            "网上购物使人们不用出门就能买东西。"
+        ]
+    },
+    {
+        "name": "Mobile payment has become increasingly popular in China.",
+        "trans": [
+            "移动支付在中国越来越普及。"
+        ]
+    },
+    {
+        "name": "Artificial intelligence is widely used in education, medicine and transportation.",
+        "trans": [
+            "人工智能广泛应用于教育、医疗和交通领域。"
+        ]
+    },
+    {
+        "name": "Big data helps companies make better decisions.",
+        "trans": [
+            "大数据帮助公司做出更好的决策。"
+        ]
+    },
+    {
+        "name": "Technological innovation promotes economic development.",
+        "trans": [
+            "科技创新促进经济发展。"
+        ]
+    },
+    {
+        "name": "Online learning provides students with more learning resources.",
+        "trans": [
+            "在线学习为学生提供更多学习资源。"
+        ]
+    },
+    {
+        "name": "We should make full use of technology to improve our study efficiency.",
+        "trans": [
+            "我们应充分利用科技提高学习效率。"
+        ]
+    },
+    {
+        "name": "However, technology also brings some problems.",
+        "trans": [
+            "然而，科技也带来一些问题。"
+        ]
+    },
+    {
+        "name": "Some young people are addicted to smartphones and online games.",
+        "trans": [
+            "一些年轻人沉迷于智能手机和网络游戏。"
+        ]
+    },
+    {
+        "name": "Excessive dependence on technology may affect face-to-face communication.",
+        "trans": [
+            "过度依赖科技可能影响面对面交流。"
+        ]
+    },
+    {
+        "name": "Personal privacy and data security have attracted wide attention.",
+        "trans": [
+            "个人隐私和数据安全已引起广泛关注。"
+        ]
+    },
+    {
+        "name": "We should protect personal privacy when using the Internet.",
+        "trans": [
+            "使用互联网时我们应保护个人隐私。"
+        ]
+    },
+    {
+        "name": "Technology should be developed and used in a responsible way.",
+        "trans": [
+            "应以负责任的方式发展和使用科技。"
+        ]
+    }
+]

@@ -1,0 +1,332 @@
+[
+    {
+        "name": "celebrate a festival",
+        "trans": [
+            "庆祝节日"
+        ]
+    },
+    {
+        "name": "fall on",
+        "trans": [
+            "适逢；在（某日）"
+        ]
+    },
+    {
+        "name": "be celebrated on",
+        "trans": [
+            "在……庆祝"
+        ]
+    },
+    {
+        "name": "date back to",
+        "trans": [
+            "追溯到"
+        ]
+    },
+    {
+        "name": "originate from",
+        "trans": [
+            "起源于"
+        ]
+    },
+    {
+        "name": "in memory of",
+        "trans": [
+            "为了纪念"
+        ]
+    },
+    {
+        "name": "get together",
+        "trans": [
+            "团聚"
+        ]
+    },
+    {
+        "name": "family reunion",
+        "trans": [
+            "家庭团聚"
+        ]
+    },
+    {
+        "name": "set off fireworks",
+        "trans": [
+            "放烟花"
+        ]
+    },
+    {
+        "name": "put up decorations",
+        "trans": [
+            "布置装饰"
+        ]
+    },
+    {
+        "name": "hang red lanterns",
+        "trans": [
+            "挂红灯笼"
+        ]
+    },
+    {
+        "name": "give red envelopes",
+        "trans": [
+            "发红包"
+        ]
+    },
+    {
+        "name": "send greetings",
+        "trans": [
+            "发送祝福"
+        ]
+    },
+    {
+        "name": "watch dragon boat races",
+        "trans": [
+            "看龙舟赛"
+        ]
+    },
+    {
+        "name": "eat mooncakes",
+        "trans": [
+            "吃月饼"
+        ]
+    },
+    {
+        "name": "visit relatives",
+        "trans": [
+            "走亲戚"
+        ]
+    },
+    {
+        "name": "pay respect to ancestors",
+        "trans": [
+            "祭拜祖先"
+        ]
+    },
+    {
+        "name": "enjoy the full moon",
+        "trans": [
+            "赏月"
+        ]
+    },
+    {
+        "name": "take part in celebrations",
+        "trans": [
+            "参加庆祝活动"
+        ]
+    },
+    {
+        "name": "have a day off",
+        "trans": [
+            "放假一天"
+        ]
+    },
+    {
+        "name": "festive atmosphere",
+        "trans": [
+            "节日气氛"
+        ]
+    },
+    {
+        "name": "the Spring Festival",
+        "trans": [
+            "春节"
+        ]
+    },
+    {
+        "name": "the Lantern Festival",
+        "trans": [
+            "元宵节"
+        ]
+    },
+    {
+        "name": "Qingming Festival / Tomb-Sweeping Day",
+        "trans": [
+            "清明节"
+        ]
+    },
+    {
+        "name": "the Dragon Boat Festival",
+        "trans": [
+            "端午节"
+        ]
+    },
+    {
+        "name": "the Mid-Autumn Festival",
+        "trans": [
+            "中秋节"
+        ]
+    },
+    {
+        "name": "the Double Ninth Festival",
+        "trans": [
+            "重阳节"
+        ]
+    },
+    {
+        "name": "National Day",
+        "trans": [
+            "国庆节"
+        ]
+    },
+    {
+        "name": "New Year’s Day",
+        "trans": [
+            "元旦"
+        ]
+    },
+    {
+        "name": "Labor Day",
+        "trans": [
+            "劳动节"
+        ]
+    },
+    {
+        "name": "Children’s Day",
+        "trans": [
+            "儿童节"
+        ]
+    },
+    {
+        "name": "Teachers’ Day",
+        "trans": [
+            "教师节"
+        ]
+    },
+    {
+        "name": "the Spring Festival Gala",
+        "trans": [
+            "春节联欢晚会"
+        ]
+    },
+    {
+        "name": "Christmas",
+        "trans": [
+            "圣诞节"
+        ]
+    },
+    {
+        "name": "Thanksgiving Day",
+        "trans": [
+            "感恩节"
+        ]
+    },
+    {
+        "name": "Halloween",
+        "trans": [
+            "万圣节"
+        ]
+    },
+    {
+        "name": "Easter",
+        "trans": [
+            "复活节"
+        ]
+    },
+    {
+        "name": "Valentine’s Day",
+        "trans": [
+            "情人节"
+        ]
+    },
+    {
+        "name": "Mother’s Day",
+        "trans": [
+            "母亲节"
+        ]
+    },
+    {
+        "name": "Father’s Day",
+        "trans": [
+            "父亲节"
+        ]
+    },
+    {
+        "name": "New Year’s Eve",
+        "trans": [
+            "除夕"
+        ]
+    },
+    {
+        "name": "traditional festival",
+        "trans": [
+            "传统节日"
+        ]
+    },
+    {
+        "name": "public holiday",
+        "trans": [
+            "公共假日"
+        ]
+    },
+    {
+        "name": "national holiday",
+        "trans": [
+            "全国性节日"
+        ]
+    },
+    {
+        "name": "legal holiday",
+        "trans": [
+            "法定假日"
+        ]
+    },
+    {
+        "name": "religious festival",
+        "trans": [
+            "宗教节日"
+        ]
+    },
+    {
+        "name": "cultural festival",
+        "trans": [
+            "文化节日"
+        ]
+    },
+    {
+        "name": "festival custom",
+        "trans": [
+            "节日习俗"
+        ]
+    },
+    {
+        "name": "festival atmosphere",
+        "trans": [
+            "节日气氛"
+        ]
+    },
+    {
+        "name": "festival greeting",
+        "trans": [
+            "节日祝福"
+        ]
+    },
+    {
+        "name": "festival decoration",
+        "trans": [
+            "节日装饰"
+        ]
+    },
+    {
+        "name": "festival food",
+        "trans": [
+            "节日食品"
+        ]
+    },
+    {
+        "name": "holiday season",
+        "trans": [
+            "假日季节"
+        ]
+    },
+    {
+        "name": "celebration activity",
+        "trans": [
+            "庆祝活动"
+        ]
+    },
+    {
+        "name": "firework display",
+        "trans": [
+            "烟花表演"
+        ]
+    }
+]

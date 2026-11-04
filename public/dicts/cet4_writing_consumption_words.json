@@ -1,0 +1,26 @@
+[
+    {
+        "name": "overconsumption",
+        "trans": [
+            "过度消费"
+        ]
+    },
+    {
+        "name": "consumerism",
+        "trans": [
+            "消费主义"
+        ]
+    },
+    {
+        "name": "saving",
+        "trans": [
+            "储蓄"
+        ]
+    },
+    {
+        "name": "spending",
+        "trans": [
+            "支出"
+        ]
+    }
+]

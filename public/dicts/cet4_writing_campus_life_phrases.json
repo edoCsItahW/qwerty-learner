@@ -1,0 +1,296 @@
+[
+    {
+        "name": "campus life",
+        "trans": [
+            "校园生活"
+        ]
+    },
+    {
+        "name": "dormitory life",
+        "trans": [
+            "宿舍生活"
+        ]
+    },
+    {
+        "name": "roommate relationship",
+        "trans": [
+            "室友关系"
+        ]
+    },
+    {
+        "name": "interpersonal relationship",
+        "trans": [
+            "人际关系"
+        ]
+    },
+    {
+        "name": "student organizations / clubs",
+        "trans": [
+            "学生组织/社团"
+        ]
+    },
+    {
+        "name": "extracurricular activities",
+        "trans": [
+            "课外活动"
+        ]
+    },
+    {
+        "name": "campus activities",
+        "trans": [
+            "校园活动"
+        ]
+    },
+    {
+        "name": "volunteer work / volunteer service",
+        "trans": [
+            "志愿服务"
+        ]
+    },
+    {
+        "name": "part-time job",
+        "trans": [
+            "兼职"
+        ]
+    },
+    {
+        "name": "social practice",
+        "trans": [
+            "社会实践"
+        ]
+    },
+    {
+        "name": "teacher-student relationship",
+        "trans": [
+            "师生关系"
+        ]
+    },
+    {
+        "name": "campus safety",
+        "trans": [
+            "校园安全"
+        ]
+    },
+    {
+        "name": "campus culture",
+        "trans": [
+            "校园文化"
+        ]
+    },
+    {
+        "name": "canteen food",
+        "trans": [
+            "食堂饭菜"
+        ]
+    },
+    {
+        "name": "library resources",
+        "trans": [
+            "图书馆资源"
+        ]
+    },
+    {
+        "name": "fitness / physical exercise",
+        "trans": [
+            "健身/体育锻炼"
+        ]
+    },
+    {
+        "name": "mental health",
+        "trans": [
+            "心理健康"
+        ]
+    },
+    {
+        "name": "psychological pressure",
+        "trans": [
+            "心理压力"
+        ]
+    },
+    {
+        "name": "adaptation to college life",
+        "trans": [
+            "对大学生活的适应"
+        ]
+    },
+    {
+        "name": "financial management",
+        "trans": [
+            "理财"
+        ]
+    },
+    {
+        "name": "team spirit",
+        "trans": [
+            "团队精神"
+        ]
+    },
+    {
+        "name": "communication skills",
+        "trans": [
+            "沟通能力"
+        ]
+    },
+    {
+        "name": "social skills",
+        "trans": [
+            "社交能力"
+        ]
+    },
+    {
+        "name": "dormitory regulations",
+        "trans": [
+            "宿舍规定"
+        ]
+    },
+    {
+        "name": "adapt to college life",
+        "trans": [
+            "适应大学生活"
+        ]
+    },
+    {
+        "name": "get along well with roommates",
+        "trans": [
+            "与室友和睦相处"
+        ]
+    },
+    {
+        "name": "build good interpersonal relationships",
+        "trans": [
+            "建立良好人际关系"
+        ]
+    },
+    {
+        "name": "participate in student organizations",
+        "trans": [
+            "参加学生组织"
+        ]
+    },
+    {
+        "name": "take an active part in extracurricular activities",
+        "trans": [
+            "积极参加课外活动"
+        ]
+    },
+    {
+        "name": "enrich one’s campus life",
+        "trans": [
+            "丰富校园生活"
+        ]
+    },
+    {
+        "name": "make friends with",
+        "trans": [
+            "与……交朋友"
+        ]
+    },
+    {
+        "name": "communicate with teachers",
+        "trans": [
+            "与老师沟通"
+        ]
+    },
+    {
+        "name": "develop communication skills",
+        "trans": [
+            "培养沟通能力"
+        ]
+    },
+    {
+        "name": "cultivate team spirit",
+        "trans": [
+            "培养团队精神"
+        ]
+    },
+    {
+        "name": "do volunteer work",
+        "trans": [
+            "做志愿服务"
+        ]
+    },
+    {
+        "name": "take a part-time job",
+        "trans": [
+            "做兼职"
+        ]
+    },
+    {
+        "name": "gain practical experience",
+        "trans": [
+            "获得实践经验"
+        ]
+    },
+    {
+        "name": "strike a balance between study and activities",
+        "trans": [
+            "平衡学习与活动"
+        ]
+    },
+    {
+        "name": "keep the dormitory clean",
+        "trans": [
+            "保持宿舍整洁"
+        ]
+    },
+    {
+        "name": "follow dormitory regulations",
+        "trans": [
+            "遵守宿舍规定"
+        ]
+    },
+    {
+        "name": "relieve psychological pressure",
+        "trans": [
+            "缓解心理压力"
+        ]
+    },
+    {
+        "name": "seek psychological counseling",
+        "trans": [
+            "寻求心理咨询"
+        ]
+    },
+    {
+        "name": "pay attention to campus safety",
+        "trans": [
+            "注意校园安全"
+        ]
+    },
+    {
+        "name": "make full use of library resources",
+        "trans": [
+            "充分利用图书馆资源"
+        ]
+    },
+    {
+        "name": "take regular physical exercise",
+        "trans": [
+            "定期锻炼"
+        ]
+    },
+    {
+        "name": "manage one’s monthly budget",
+        "trans": [
+            "管理每月预算"
+        ]
+    },
+    {
+        "name": "improve one’s overall quality",
+        "trans": [
+            "提高综合素质"
+        ]
+    },
+    {
+        "name": "broaden one’s horizons",
+        "trans": [
+            "开阔眼界"
+        ]
+    },
+    {
+        "name": "leave a good impression on",
+        "trans": [
+            "给……留下好印象"
+        ]
+    }
+]

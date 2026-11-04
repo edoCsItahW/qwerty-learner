@@ -1,0 +1,32 @@
+[
+    {
+        "name": "nutrition",
+        "trans": [
+            "营养"
+        ]
+    },
+    {
+        "name": "immunity",
+        "trans": [
+            "免疫力"
+        ]
+    },
+    {
+        "name": "obesity",
+        "trans": [
+            "肥胖"
+        ]
+    },
+    {
+        "name": "anxiety",
+        "trans": [
+            "焦虑"
+        ]
+    },
+    {
+        "name": "depression",
+        "trans": [
+            "抑郁"
+        ]
+    }
+]

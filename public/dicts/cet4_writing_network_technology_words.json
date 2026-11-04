@@ -1,0 +1,26 @@
+[
+    {
+        "name": "smartphone",
+        "trans": [
+            "智能手机"
+        ]
+    },
+    {
+        "name": "e-commerce",
+        "trans": [
+            "电子商务"
+        ]
+    },
+    {
+        "name": "cybersecurity",
+        "trans": [
+            "网络安全"
+        ]
+    },
+    {
+        "name": "cyberbullying",
+        "trans": [
+            "网络暴力/网络欺凌"
+        ]
+    }
+]

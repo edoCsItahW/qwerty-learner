@@ -1,0 +1,188 @@
+[
+    {
+        "name": "technology",
+        "trans": [
+            "n. 科技；技术"
+        ]
+    },
+    {
+        "name": "technological",
+        "trans": [
+            "adj. 技术的"
+        ]
+    },
+    {
+        "name": "science",
+        "trans": [
+            "n. 科学"
+        ]
+    },
+    {
+        "name": "scientific",
+        "trans": [
+            "adj. 科学的"
+        ]
+    },
+    {
+        "name": "innovation",
+        "trans": [
+            "n. 创新"
+        ]
+    },
+    {
+        "name": "innovative",
+        "trans": [
+            "adj. 创新的"
+        ]
+    },
+    {
+        "name": "invention",
+        "trans": [
+            "n. 发明"
+        ]
+    },
+    {
+        "name": "invent",
+        "trans": [
+            "v. 发明"
+        ]
+    },
+    {
+        "name": "digital",
+        "trans": [
+            "adj. 数字的"
+        ]
+    },
+    {
+        "name": "device",
+        "trans": [
+            "n. 设备；装置"
+        ]
+    },
+    {
+        "name": "smartphone",
+        "trans": [
+            "n. 智能手机"
+        ]
+    },
+    {
+        "name": "internet",
+        "trans": [
+            "n. 互联网"
+        ]
+    },
+    {
+        "name": "online",
+        "trans": [
+            "adj./adv. 在线的"
+        ]
+    },
+    {
+        "name": "network",
+        "trans": [
+            "n. 网络"
+        ]
+    },
+    {
+        "name": "data",
+        "trans": [
+            "n. 数据"
+        ]
+    },
+    {
+        "name": "information",
+        "trans": [
+            "n. 信息"
+        ]
+    },
+    {
+        "name": "artificial intelligence",
+        "trans": [
+            "n. 人工智能"
+        ]
+    },
+    {
+        "name": "robot",
+        "trans": [
+            "n. 机器人"
+        ]
+    },
+    {
+        "name": "automation",
+        "trans": [
+            "n. 自动化"
+        ]
+    },
+    {
+        "name": "algorithm",
+        "trans": [
+            "n. 算法"
+        ]
+    },
+    {
+        "name": "application",
+        "trans": [
+            "n. 应用；申请"
+        ]
+    },
+    {
+        "name": "software",
+        "trans": [
+            "n. 软件"
+        ]
+    },
+    {
+        "name": "hardware",
+        "trans": [
+            "n. 硬件"
+        ]
+    },
+    {
+        "name": "digitalize",
+        "trans": [
+            "v. 数字化"
+        ]
+    },
+    {
+        "name": "efficient",
+        "trans": [
+            "adj. 高效的"
+        ]
+    },
+    {
+        "name": "convenient",
+        "trans": [
+            "adj. 方便的"
+        ]
+    },
+    {
+        "name": "privacy",
+        "trans": [
+            "n. 隐私"
+        ]
+    },
+    {
+        "name": "security",
+        "trans": [
+            "n. 安全"
+        ]
+    },
+    {
+        "name": "replace",
+        "trans": [
+            "v. 取代"
+        ]
+    },
+    {
+        "name": "dependence",
+        "trans": [
+            "n. 依赖"
+        ]
+    },
+    {
+        "name": "addiction",
+        "trans": [
+            "n. 上瘾"
+        ]
+    }
+]
